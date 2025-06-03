@@ -2,10 +2,15 @@ package ar.edu.unahur.obj2.command.comandos;
 
 import ar.edu.unahur.obj2.command.Programable;
 
-public interface Operable {
+public abstract class Operable {
 
-    void execute(Programable micro);
+    public void execute(Programable micro){
+        this.accion(micro);
+        micro.incProgramCounter();
+    }
 
-    void undo(Programable micro);
+    public abstract void accion(Programable micro);
+
+    public abstract void undo(Programable micro);
 
 }
