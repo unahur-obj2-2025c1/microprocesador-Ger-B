@@ -5,7 +5,7 @@ import ar.edu.unahur.obj2.command.Programable;
 public class StrAddr extends Operable {
     private Integer adres;
 
-    public StrAddr(Integer adres, Integer val){
+    public StrAddr(Integer adres){
         this.adres = adres;
     }
 

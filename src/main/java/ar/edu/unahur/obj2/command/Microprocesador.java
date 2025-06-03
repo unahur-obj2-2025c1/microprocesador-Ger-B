@@ -65,12 +65,18 @@ public class Microprocesador implements Programable{
 
     @Override
     public void setAddr(Integer addr, Integer val) {
-        datos.add(addr, val);
+        if(addr>=0 && addr<1024){
+            datos.add(addr, val);
+        }
     }
 
     @Override
     public Integer getAddr(Integer addr) {
-        return datos.get(addr);
+        if(addr>=0 && addr<1024){
+            return datos.get(addr);
+        }else{
+            return 0;
+        }
     }
 
 }
