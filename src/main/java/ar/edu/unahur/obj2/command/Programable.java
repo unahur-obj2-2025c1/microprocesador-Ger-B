@@ -22,11 +22,11 @@ public interface Programable {
 
     void copyFrom(Programable programable);
 
-    Programable copy();
+    // Programable copy();
 
     void reset();
 
-    void setAddr(Integer addr);
+    void setAddr(Integer addr, Integer val);
 
     Integer getAddr(Integer addr);
 }
